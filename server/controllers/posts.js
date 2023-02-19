@@ -21,7 +21,7 @@ export const createPost = async (req, res) => {
       comments: [],
     });
     await newPost.save();
-    const Post = await Post.find();
+    const post = await Post.find();
     res.status(201).json(post);
   } catch (error) {
     res.status(409).json({ error: error.message });
@@ -53,7 +53,7 @@ export const likePost = async (req, res) => {
   try {
     const { id } = req.params;
     const { userId } = req.body;
-    const post = await Post.find({ id });
+    const post = await Post.findById(id);
     // get method in map is used find key is present or not
     const isLiked = post.likes.get(userId); // isLiked is boolean value
     if (isLiked) {
@@ -62,7 +62,7 @@ export const likePost = async (req, res) => {
       post.likes.set(userId, true);
     }
 
-    const updatedPost = Post.findByIdAndUpdate(
+    const updatedPost = await Post.findByIdAndUpdate(
       id, // to find operation to be performed on which post
       { likes: post.likes }, // what are the updates
       { new: true } //  if true, return the modified document rather than the original

@@ -149,7 +149,8 @@ export const posts = [
     firstName: "Steve",
     lastName: "Ralph",
     location: "New York, CA",
-    description: "Some really long random description",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima vel voluptatum quae dolor provident dolorum tempora labore totam, consectetur error sapiente, ea accusantium amet sint debitis, laboriosam enim corrupti veritatis!Ex, vel, nulla obcaecati ad libero nihil in sint tempora, praesentium unde eveniet est possimus ea ipsam. Ipsum perferendis harum quae veritatis, incidunt cupiditate. Voluptatum alias aspernatur pariatur incidunt nobis.",
     picturePath: "post1.jpeg",
     userPicturePath: "p3.jpeg",
     likes: new Map([
@@ -171,7 +172,7 @@ export const posts = [
     lastName: "Doing",
     location: "Korea, CA",
     description:
-      "Another really long random description. This one is longer than the previous one.",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque aut qui dicta reprehenderit vitae voluptatibus molestias ea, quidem at. Possimus dolorum temporibus quo aliquam quae minima aliquid illum culpa adipisci?",
     picturePath: "post2.jpeg",
     userPicturePath: "p6.jpeg",
     likes: new Map([
@@ -194,7 +195,7 @@ export const posts = [
     lastName: "Doe",
     location: "Utah, CA",
     description:
-      "This is the last really long random description. This one is longer than the previous one.",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur voluptatem necessitatibus reiciendis ea ipsum corporis earum ad illo, corrupti aliquam autem dolore fugit aspernatur vel delectus exercitationem fuga consequuntur repellat? Aliquam beatae non dolores ex voluptate reprehenderit perferendis rerum quisquam, sapiente eum nostrum repudiandae, eaque repellat exercitationem soluta accusamus quam eius assumenda repellendus, maiores corrupti aut! Quam consectetur est deserunt!Sint odio tempora eius, exercitationem culpa adipisci alias, voluptates temporibus facilis deserunt in dolorem dicta repellat illum dolorum libero maiores beatae hic est quidem repellendus magni consequuntur? Deserunt, obcaecati repellat!",
     picturePath: "post3.jpeg",
     userPicturePath: "p5.jpeg",
     likes: new Map([
@@ -204,11 +205,7 @@ export const posts = [
       [userIds[5], true],
     ]),
     comments: [
-      "one more random comment",
-      "I lied, one more random comment",
-      "I lied again, one more random comment",
-      "Why am I doing this?",
-      "I'm bored",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus exercitationem mollitia dignissimos maiores, quia nostrum velit rerum maxime, nisi aspernatur officia adipisci cum repellat neque hic accusantium laborum ipsam ad? Tempora enim fuga molestias aliquam eligendi nam ut officia odit consequatur natus ipsam voluptate, repudiandae rem. Obcaecati, vel. Aut eum iste quod atque a exercitationem odio, explicabo delectus qui quidem.",
     ],
   },
   {
@@ -252,11 +249,7 @@ export const posts = [
       [userIds[7], true],
     ]),
     comments: [
-      "I lied again, one more random comment",
-      "Why am I doing this?",
-      "Man I'm bored",
-      "What should I do?",
-      "I'm going to play video games",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus accusantium dignissimos illum aspernatur? Eveniet perspiciatis eos voluptas illo fugit dolore libero, quibusdam aut, excepturi autem pariatur repellat at dolores cupiditate?",
     ],
   },
   {
@@ -266,7 +259,7 @@ export const posts = [
     lastName: "Dunn",
     location: "Washington, DC",
     description:
-      "For the last time, I'm going to play video games now. I'm tired of typing. I'm going to play video games now.",
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione ipsa illum earum quia aliquam quas nisi inventore pariatur, excepturi voluptatum, voluptas, ducimus ipsum? At eveniet quia, deserunt atque voluptatum perspiciatis!",
     picturePath: "post6.jpeg",
     userPicturePath: "p9.jpeg",
     likes: new Map([
