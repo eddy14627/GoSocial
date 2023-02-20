@@ -5,6 +5,7 @@ import WidgetWrapper from "components/WidgetWrapper";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFriends } from "state";
+import BASE_URL from "../../url.js";
 
 const FriendListWidgets = ({ userId }) => {
   const dispatch = useDispatch();
@@ -13,13 +14,10 @@ const FriendListWidgets = ({ userId }) => {
   const friends = useSelector((state) => state.user.friends);
 
   const getFriends = async () => {
-    const response = await fetch(
-      `https://social-media-app-lac.vercel.app/users/${userId}/friends`,
-      {
-        method: "GET",
-        headers: { Authorization: `Bearer ${token}` },
-      }
-    );
+    const response = await fetch(`${BASE_URL}/users/${userId}/friends`, {
+      method: "GET",
+      headers: { Authorization: `Bearer ${token}` },
+    });
     const data = await response.json();
     dispatch(setFriends({ friends: data }));
   };

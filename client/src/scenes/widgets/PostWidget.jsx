@@ -12,6 +12,7 @@ import WidgetWrapper from "components/WidgetWrapper";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "state";
+import BASE_URL from "../../url.js";
 
 const PostWidget = ({
   postId,
@@ -36,17 +37,14 @@ const PostWidget = ({
   const primary = palette.primary.main;
 
   const patchLike = async () => {
-    const response = await fetch(
-      `https://social-media-app-lac.vercel.app/posts/${postId}/like`,
-      {
-        method: "PATCH",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ userId: loggedInUserId }),
-      }
-    );
+    const response = await fetch(`${BASE_URL}/posts/${postId}/like`, {
+      method: "PATCH",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ userId: loggedInUserId }),
+    });
     const updatedPosts = await response.json();
     dispatch(setPost({ post: updatedPosts }));
   };
@@ -70,7 +68,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`https://social-media-app-lac.vercel.app/assets/${picturePath}`}
+          src={`${BASE_URL}/assets/${picturePath}`}
         />
       )}
       <FlexBetween mt="0.25rem">

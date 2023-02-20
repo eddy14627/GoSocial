@@ -1,5 +1,6 @@
 import { Box } from "@mui/system";
 import React from "react";
+import BASE_URL from "url";
 
 const UserImage = ({ image, size = "60px" }) => {
   return (
@@ -9,7 +10,7 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`https://social-media-app-lac.vercel.app/assets/${image}`}
+        src={`${BASE_URL}/assets/${image}`}
       />
     </Box>
   );

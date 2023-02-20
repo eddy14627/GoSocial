@@ -2,6 +2,7 @@ import { useTheme } from "@emotion/react";
 import { Typography } from "@mui/material";
 import FlexBetween from "components/FlexBetween";
 import WidgetWrapper from "components/WidgetWrapper";
+import BASE_URL from "../../url.js";
 
 export const AdvertWidget = () => {
   const { palette } = useTheme();
@@ -21,7 +22,7 @@ export const AdvertWidget = () => {
         width="100%"
         height="auto"
         alt="advert"
-        src="https://social-media-app-lac.vercel.app/assets/info4.jpeg"
+        src={`${BASE_URL}/assets/info4.jpeg`}
         style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
       />
       <FlexBetween>

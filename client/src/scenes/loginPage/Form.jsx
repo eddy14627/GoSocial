@@ -15,6 +15,7 @@ import { useDispatch } from "react-redux";
 import { setLogin } from "state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "components/FlexBetween";
+import BASE_URL from "../../url.js";
 
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("required"),
@@ -63,13 +64,10 @@ const Form = () => {
     }
     formData.append("picturePath", values.picture.name);
 
-    const savedUserResponse = await fetch(
-      "https://social-media-app-lac.vercel.app/auth/register",
-      {
-        method: "POST",
-        body: formData,
-      }
-    );
+    const savedUserResponse = await fetch(`${BASE_URL}/auth/register`, {
+      method: "POST",
+      body: formData,
+    });
     const savedUser = await savedUserResponse.json();
     onSubmitProps.resetForm();
 
@@ -80,14 +78,11 @@ const Form = () => {
 
   const login = async (values, onSubmitProps) => {
     console.log(values);
-    const loggedInResponse = await fetch(
-      "https://social-media-app-lac.vercel.app/auth/login",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      }
-    );
+    const loggedInResponse = await fetch(`${BASE_URL}/auth/login`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(values),
+    });
     const loggedIn = await loggedInResponse.json();
     onSubmitProps.resetForm();
     if (loggedIn) {

@@ -8,6 +8,7 @@ import FriendListWidgets from "scenes/widgets/FriendListWidgets";
 import MyPostWidget from "scenes/widgets/MyPostWidget";
 import PostsWidget from "scenes/widgets/PostsWidget";
 import UserWidget from "scenes/widgets/UserWidget";
+import BASE_URL from "../../url.js";
 
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
@@ -16,13 +17,10 @@ const ProfilePage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width : 1000px)");
 
   const getUser = async () => {
-    const response = await fetch(
-      `https://social-media-app-lac.vercel.app/users/${userId}`,
-      {
-        method: "GET",
-        headers: { Authorization: `Bearer ${token}` },
-      }
-    );
+    const response = await fetch(`${BASE_URL}/users/${userId}`, {
+      method: "GET",
+      headers: { Authorization: `Bearer ${token}` },
+    });
     const data = await response.json();
     setUser(data);
   };
