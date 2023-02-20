@@ -1,2 +1,2 @@
-const BASE_URL = "https://social-media-app-lac.vercel.app";
+const BASE_URL = "https://go-social-weqt.onrender.com";
 export default BASE_URL;
