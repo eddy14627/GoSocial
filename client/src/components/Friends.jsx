@@ -25,7 +25,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `https://go-social-beige.vercel.app/users/${_id}/${friendId}`,
+      `https://social-media-app-lac.vercel.app/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {

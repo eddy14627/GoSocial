@@ -46,11 +46,14 @@ const MyPostWidget = ({ picturePath }) => {
       formData.append("picturePath", image.name);
     }
 
-    const response = await fetch(`https://go-social-beige.vercel.app/posts`, {
-      method: "POST",
-      headers: { Authorization: `Bearer ${token}` },
-      body: formData,
-    });
+    const response = await fetch(
+      `https://social-media-app-lac.vercel.app/posts`,
+      {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` },
+        body: formData,
+      }
+    );
     const posts = await response.json();
     dispatch(setPosts({ posts }));
     setImage(null);

@@ -64,7 +64,7 @@ const Form = () => {
     formData.append("picturePath", values.picture.name);
 
     const savedUserResponse = await fetch(
-      "https://go-social-beige.vercel.app/auth/register",
+      "https://social-media-app-lac.vercel.app/auth/register",
       {
         method: "POST",
         body: formData,
@@ -81,7 +81,7 @@ const Form = () => {
   const login = async (values, onSubmitProps) => {
     console.log(values);
     const loggedInResponse = await fetch(
-      "https://go-social-beige.vercel.app/auth/login",
+      "https://social-media-app-lac.vercel.app/auth/login",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

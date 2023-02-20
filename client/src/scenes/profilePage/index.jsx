@@ -17,7 +17,7 @@ const ProfilePage = () => {
 
   const getUser = async () => {
     const response = await fetch(
-      `https://go-social-beige.vercel.app/users/${userId}`,
+      `https://social-media-app-lac.vercel.app/users/${userId}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

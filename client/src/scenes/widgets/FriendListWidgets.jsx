@@ -14,7 +14,7 @@ const FriendListWidgets = ({ userId }) => {
 
   const getFriends = async () => {
     const response = await fetch(
-      `https://go-social-beige.vercel.app/users/${userId}/friends`,
+      `https://social-media-app-lac.vercel.app/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

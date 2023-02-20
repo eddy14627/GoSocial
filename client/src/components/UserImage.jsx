@@ -9,7 +9,7 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`https://go-social-beige.vercel.app/assets/${image}`}
+        src={`https://social-media-app-lac.vercel.app/assets/${image}`}
       />
     </Box>
   );
